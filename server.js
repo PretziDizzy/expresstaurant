@@ -6,7 +6,7 @@ const app = express()
 const port = 3000
 
 //points toward folder of static files
-// app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 //GET method on /flipcoin route responds with heads or tails
 // app.get('./Waiter', (req, res) => {
@@ -22,7 +22,8 @@ const port = 3000
 //GET method on /restaurants route returns all restaurants
 app.get('/waiter', async (req,res) => {
     //find all instances of the Model Restaurant
-    const allWaiters = await Waiters.findAll()
+    const allWaiters = await Waiter.findAll()
+    console.log(req)
     //respond with allRestaurants as a json objeect
     res.json(allWaiters)
 })
