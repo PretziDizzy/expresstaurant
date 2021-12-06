@@ -23,7 +23,7 @@ const seedWaiter = [
   },
 ]
 
-// const seedMenu = [
+// const seedItem = [
 //   {
 //     title: 'Breakfast',
 //     RestaurantId : 1,
@@ -86,3 +86,4 @@ seed()
       console.error('Oh noes! Something went wrong!')
       console.error(err)
     })
+    
